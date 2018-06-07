@@ -1,0 +1,12 @@
+.van-field .van-cell__value {
+  text-align: left;
+}
+.van-stepper__input {
+  width: 80px;
+}
+.van-cell-placeholder {
+  color: #757575;
+}
+.check-list .van-cell__title {
+  flex: 5;
+}

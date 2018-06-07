@@ -1,0 +1,26 @@
+﻿<el-row :gutter="24">
+    <el-button type="text" @click="dialogShow = true">选择人员</el-button>
+    <el-dialog title="收货地址" :visible.sync="dialogShow">
+        <el-row :gutter="24">
+            <el-col :span="8">
+                <el-tree :data="treeData" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+            </el-col>
+            <el-col :span="16">
+                <el-table :data="tableData" style="width: 100%">
+                    <el-table-column type="selection" width="55">
+                    </el-table-column>
+                    <el-table-column prop="date" label="日期" width="180">
+                    </el-table-column>
+                    <el-table-column prop="name" label="姓名" width="180">
+                    </el-table-column>
+                    <el-table-column prop="address" label="地址">
+                    </el-table-column>
+                </el-table>
+            </el-col>
+        </el-row>
+        <div slot="footer" class="dialog-footer">
+            <el-button @click="dialogShow = false">取 消</el-button>
+            <el-button type="primary" @click="dialogShow = false">确 定</el-button>
+        </div>
+    </el-dialog>
+</el-row>

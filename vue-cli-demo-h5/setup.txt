@@ -1,0 +1,3 @@
+--npm install all 下载插件包
+--npm run dev 调试
+--npm build 打包
